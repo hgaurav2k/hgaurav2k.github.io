@@ -462,18 +462,24 @@ width: 950px;
 height: 100px;
 overflow-y: scroll;
 margin: 0 auto;
+list-style-type: circle;
+color: black; 
 }
 
 .news-ticker ul {
-list-style-type: none;
+list-style-type: circle;
 padding: 0;
 margin: 0;
 }
 
+
 .news-ticker li {
 padding: 10px;
+border-bottom: none; 
+list-style-type: circle;
+
 }
 
 .news-ticker li:last-child {
-border-bottom: none;
+border-bottom: 1px solid #ccc;
 }
