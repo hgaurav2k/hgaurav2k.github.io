@@ -461,16 +461,23 @@ body {
     width: 950px;
     height: 100px;
     overflow-y: scroll;
+    /* overflow-x: wrap; */
 }
 
 .news-ticker ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
+    overflow-y: scroll;
+    /* overflow-x: wrap; */
 }
 
-.news-ticker li {
+.news-ticker ul li {
     padding: 10px;
+    overflow-y: scroll;
+    /* overflow-x: wrap; */
+    /* word-wrap: break-word; */
+    /* overflow-wrap: break-word; */
 }
 
 .news-ticker li:last-child {
