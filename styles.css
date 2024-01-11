@@ -1,10 +1,17 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #1c1c21;
+        /* Sets the background to black */
+        color: #ffffff;
+        /* Sets the text color to white */
+    
+        font-size: 20px;
+    
 }
 
 a {
-    color: #8d5638
+    color: #33769f;
 }
 
 a:hover {
@@ -37,7 +44,11 @@ a:hover {
     width: 100%;
     min-width: 240px;
     text-align: center;
-    background-color: #fafcff;
+    /* background-color: #fafcff; */
+    background-color: #1c1c1c;
+    /* Sets the background to black */
+    color: #ffffff;
+    /* * Sets the text color to white */ 
 }
 
 .highlight {
@@ -57,6 +68,10 @@ a:hover {
     cursor: default;
     text-align: center;
     background-color: #fafcff;
+    background-color: #1c1c1c;
+        /* Sets the background to black */
+        color: #ffffff;
+        /* Sets the text color to white */
 
 }
 
@@ -114,12 +129,12 @@ margin: 0 auto;
 }
 
 #main-content-container .col-avatar .avatar {
-    z-index: 100;
-    width: 150px;
-    height: 150px;
+    z-index: 100; 
+    width: 200px;
+    height: 200px;
     margin-top: 0px;
-    border-radius: 100%;
-    box-shadow: 0 0 0 0.3em #eee;
+    /* border-radius: 100%; */
+    /* box-shadow: 0 0 0 0.3em #eee; */
     opacity: 1;
 }
 
@@ -234,7 +249,8 @@ margin: 0 auto;
     max-width: 1080px;
     text-align: left;
     padding-top: 30px;
-    max-width: 1080px
+    max-width: 1080px;
+    background-color: #1c1c21;
 }
 
 #main-pub-container .subtitle {
@@ -288,7 +304,7 @@ margin: 0 auto;
     padding-bottom: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
-    font-size: 1rem
+    font-size: 1.5rem
 }
 
 #main-pub-card-container .pub-card .col-l {
@@ -301,6 +317,7 @@ margin: 0 auto;
     padding-top: 20px;
     margin-top: 50px;
     margin-bottom: 50px;
+    font-size: 20px; 
 }
 
 #main-pub-card-container .pub-card img {
@@ -312,6 +329,7 @@ margin: 0 auto;
     width: 100%;
     background: transparent;
     padding-left: 10px
+    font-size: 20px;
 }
 
 #main-pub-card-container .pub-card .title {
@@ -376,7 +394,7 @@ margin: 0 auto;
     font-size: 12px;
     line-height: 12px;
     text-align: left;
-    background: #fef8f3;
+    background-color: #1c1c2c;; 
 
 }
 
@@ -470,6 +488,10 @@ color: black;
 list-style-type: circle;
 padding: 0;
 margin: 0;
+background-color: #1c1c21;
+    /* Sets the background to black */
+    color: #ffffff;
+    /* Sets the text color to white */
 }
 
 
