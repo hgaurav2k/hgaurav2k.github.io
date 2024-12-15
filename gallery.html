@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #111;
+            color: #fff;
+        }
+        .header {
+            text-align: center;
+            padding: 20px;
+            background-color: #000;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+        .navbar {
+            display: flex;
+            justify-content: center;
+            background-color: #111;
+            padding: 10px 0;
+        }
+        .navbar a {
+            color: #fff;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .photo-wall {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 10px;
+            padding: 10px;
+        }
+        .photo-wall img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+        .photo-wall img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        .tooltip {
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.9em;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s;
+            transform: translate(-50%, -100%);
+            white-space: nowrap;
+        }
+        .photo-wall img:hover + .tooltip {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1 >Pretty Pixels</h1>
+    </div>
+
+    <div class="photo-wall">
+        <div style="position: relative;">
+            <img src="pictures/sangam1.png" alt="Photo 1">
+            <div class="tooltip">Sangam, Allahabad</div>
+        </div>
+        <div style="position: relative;">
+            <img src="pictures/sangam2.png" alt="Photo 2">
+            <div class="tooltip">Sangam, Allahabad</div>
+        </div>
+        <div style="position: relative;">
+            <img src="pictures/sangam3.png" alt="Photo 6">
+            <div class="tooltip">Sangam, Allahabad</div>
+        </div>
+        <div style="position: relative;">
+            <img src="pictures/berkeley1.png" alt="Photo 3">
+            <div class="tooltip">Berkeley</div>
+        </div>
+        <div style="position: relative;">
+            <img src="pictures/berkeley2.png" alt="Photo 4">
+            <div class="tooltip">Berkeley</div>
+        </div>
+        <div style="position: relative;">
+            <img src="pictures/berkeley3.png" alt="Photo 5">
+            <div class="tooltip">Berkeley</div>
+        </div>
+    </div>
+
+</body>
+</html>
