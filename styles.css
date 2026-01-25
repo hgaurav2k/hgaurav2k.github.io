@@ -1,22 +1,73 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: #1c1c21;
-        /* Sets the background to black */
-        color: #ffffff;
-        /* Sets the text color to white */
-    
-        font-size: 20px;
-    
+    background-color: #fdf9f3;
+    color: #2d2a26;
+    font-size: 18px;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+}
+
+/* Sticky Navigation */
+#sticky-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(253, 249, 243, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    z-index: 1000;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+}
+
+#sticky-nav.visible {
+    transform: translateY(0);
+}
+
+#sticky-nav .nav-content {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#sticky-nav .nav-name {
+    font-weight: 600;
+    font-size: 1rem;
+    color: #2d2a26;
+}
+
+#sticky-nav .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+#sticky-nav .nav-links a {
+    font-size: 0.85rem;
+    color: rgba(45, 42, 38, 0.6);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+#sticky-nav .nav-links a:hover {
+    color: #2d2a26;
 }
 
 a {
-    color: #33769f;
+    color: #b45a3c;
+    text-decoration: none;
+    transition: color 0.2s ease;
 }
 
 a:hover {
-    color: #bc6262;
-    cursor: pointer
+    color: #8b4533;
+    cursor: pointer;
 }
 
 #background {
@@ -40,15 +91,12 @@ a:hover {
 /*#main{z-index:2;margin:0 auto;position:absolute;padding-top:5%;width:100%;min-width:240px;text-align:center;background-color:rgb(254,250,246)}*/
 #main {
     margin: 0 auto;
-    padding: 45px 30px 15px;
+    padding: 60px 30px 30px;
     width: 100%;
     min-width: 240px;
     text-align: center;
-    /* background-color: #fafcff; */
-    background-color: #1c1c1c;
-    /* Sets the background to black */
-    color: #ffffff;
-    /* * Sets the text color to white */ 
+    background-color: #fdf9f3;
+    color: #2d2a26;
 }
 
 .highlight {
@@ -66,13 +114,8 @@ a:hover {
     padding: 0;
     text-align: center;
     cursor: default;
-    text-align: center;
-    background-color: #fafcff;
-    background-color: #1c1c1c;
-        /* Sets the background to black */
-        color: #ffffff;
-        /* Sets the text color to white */
-
+    background-color: #fdf9f3;
+    color: #2d2a26;
 }
 
 /*.main-content{background:rgba(238,238,238,0.95);padding:0;text-align:center;cursor:default;text-align:center;}*/
@@ -129,13 +172,19 @@ margin: 0 auto;
 }
 
 #main-content-container .col-avatar .avatar {
-    z-index: 100; 
+    z-index: 100;
     width: 200px;
     height: 200px;
     margin-top: 35px;
-    /* border-radius: 100%; */
-    /* box-shadow: 0 0 0 0.3em #eee; */
+    border-radius: 50%;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 0 0 0 4px rgba(180, 90, 60, 0.1);
     opacity: 1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#main-content-container .col-avatar .avatar:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18), 0 0 0 4px rgba(180, 90, 60, 0.15);
 }
 
 #main-content-container .col-info {
@@ -166,9 +215,11 @@ margin: 0 auto;
 
 #main-info-container .col-name .name {
     margin: 0;
-    color: #566c7f;
-    font-size: 1.85em;
-    font-family: "Source Sans Pro", Helvetica, sans-serif
+    color: #2d2a26;
+    font-size: 2.2em;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 #main-info-container .col-name .email {
@@ -248,13 +299,19 @@ margin: 0 auto;
     padding: 0 0em;
     max-width: 1080px;
     text-align: left;
-    padding-top: 30px;
+    padding-top: 0;
     max-width: 1080px;
-    background-color: #1c1c21;
+    background-color: #fdf9f3;
 }
 
 #main-pub-container .subtitle {
-    color: #566c7f;
+    color: #2d2a26;
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    padding-bottom: 10px;
+    border-bottom: 2px solid rgba(45, 42, 38, 0.1);
+    margin-bottom: 20px;
 }
 
 #main-pub-container .subtitle a {
@@ -301,64 +358,85 @@ margin: 0 auto;
 
 #main-pub-card-container .pub-card {
     width: 100%;
-    padding-bottom: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 1.5rem
+    padding: 24px;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    font-size: 1.5rem;
+    background: #ffffff;
+    border: 1px solid rgba(45, 42, 38, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+}
+
+#main-pub-card-container .pub-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    border-color: rgba(180, 90, 60, 0.2);
 }
 
 #main-pub-card-container .pub-card .col-l {
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #main-pub-card-container .pub-card .col-r {
-    padding-top: 20px;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-size: 20px; 
+    padding-top: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
 }
 
 #main-pub-card-container .pub-card img {
     width: 100%;
-    margin: 50px;
+    max-width: 180px;
+    margin: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 #main-pub-card-container .pub-card-body {
     width: 100%;
     background: transparent;
-    padding-left: 10px;
-    font-size: 20px;
+    padding-left: 20px;
+    font-size: 18px;
 }
 
 #main-pub-card-container .pub-card .title {
     font-weight: 600;
-    font-size: 1rem;
-    margin-bottom: 4px;
-    line-height: 1.4
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+    line-height: 1.4;
+    color: #2d2a26;
 }
 
 #main-pub-card-container .pub-card .authors {
     font-weight: 400;
-    color: #666666;
-    margin-bottom: 4px;
-    line-height: 1.4
+    color: #6b6560;
+    margin-bottom: 8px;
+    line-height: 1.5;
+    font-size: 0.95rem;
 }
 
 #main-pub-card-container .pub-card .authors a {
-    color: #666666
+    color: #6b6560;
 }
 
 #main-pub-card-container .pub-card .authors u {
-    color: #333333;
+    color: #2d2a26;
     font-weight: 600;
-    text-decoration: none
+    text-decoration: none;
 }
 
 #main-pub-card-container .pub-card .conference {
-    color: #333333;
-    font-weight: 600
+    color: #b45a3c;
+    font-weight: 600;
 }
 
 #main-pub-card-container .pub-card .note {
@@ -373,29 +451,26 @@ margin: 0 auto;
 }
 
 #main-pub-card-container .row {
-    margin: 20px;
+    margin: 0;
+    display: flex;
+    align-items: center;
 }
 
 #main-pub-card-container .col-l,
 #main-pub-card-container .col-r {
-    vertical-align: top;
-    display: inline-block;
+    vertical-align: middle;
     margin: 0;
-    padding-left: 0px;
-    padding-top: 20 px;
-    padding-bottom : 20 px;
+    padding: 0;
 }
 
 #footer {
     padding: 0 0 1.5em;
-    /* margin-top:2rem; */
     min-width: 240px;
-    background: #fff;
     font-size: 12px;
     line-height: 12px;
     text-align: left;
-    background-color: #1c1c2c;; 
-
+    background-color: #f5efe6;
+    border-top: 1px solid rgba(45, 42, 38, 0.08);
 }
 
 /* #footer {
@@ -436,7 +511,7 @@ margin: 0 auto;
     display: block;
     font-size: small;
     line-height: 1.4;
-    color: #eeeeee
+    color: #6b6560;
 }
 
 #footer .stat {
@@ -459,11 +534,11 @@ margin: 0 auto;
 }
 
 #footer a {
-    color: #d3d3d3;
+    color: #b45a3c;
 }
 
 #footer a:hover {
-    color: #d3d3dd;
+    color: #8b4533;
 }
 
 .bold {

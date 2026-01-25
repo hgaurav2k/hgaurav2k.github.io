@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
         integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <!--[if lt IE 9]>
       <script src="http://cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -23,6 +26,17 @@
 </head>
   
 <body>
+    <nav id="sticky-nav">
+        <div class="nav-content">
+            <span class="nav-name">Himanshu Gaurav Singh</span>
+            <div class="nav-links">
+                <a href="data/resume.pdf">resume</a>
+                <a href="https://scholar.google.com/citations?user=qav_fQYAAAAJ&hl=en">scholar</a>
+                <a href="https://github.com/hgaurav2k">github</a>
+                <a href="mailto:himanshu_singh@berkeley.edu">email</a>
+            </div>
+        </div>
+    </nav>
     <div id="main">
         <!--canvas id="wave-canvas"></canvas-->
         <div class="main-content">
@@ -32,7 +46,7 @@
                         <img src="static/img/himanshu.jpg" class="avatar" />
                     </div> -->
                     <div class="col-sm-12 col-md-3 col-avatar">
-                        <img src="static/img/himanshu.jpg" class="avatar" style="border-radius: 50%;" />
+                        <img src="static/img/himanshu.jpg" class="avatar" />
                     </div>
                     <div class="col-sm-12 col-md-9">
                         <div id="main-info-container">
@@ -51,10 +65,8 @@
                                         href="https://bair.berkeley.edu" target="_blank">Berkeley AI Research</a>,
                                     co-advised by
                                     Prof. <a href="https://people.eecs.berkeley.edu/~pabbeel/" , target="_blank"> Pieter Abbeel </a> and
-                                    <a href="https://people.eecs.berkeley.edu/~malik/" target="_blank"> Jitendra Malik</a>. <br>
-                                    Previously, I received my B.Tech in CS from <a href="https://www.iitd.ac.in/" target="_blank">IIT Delhi</a>. <br>
-                                    <br>
-                                    The goal of my research is to develop general purpose robots.
+                                    <a href="https://people.eecs.berkeley.edu/~malik/" target="_blank"> Jitendra Malik</a>. I work on robot learning. <br><br>
+                                    Previously, I did my undergrad in Computer Science from <a href="https://www.iitd.ac.in/" target="_blank">IIT Delhi</a>. There, I worked on <a href="https://arxiv.org/abs/2211.06652" target="_blank">unifying learning and search together</a> for stronger generalization, and then on <a href="https://arxiv.org/abs/2305.15074" target="_blank">reasoning with LLMs</a>. <br>
                             </div>
                         </div>
                     </div>
@@ -253,69 +265,12 @@
                                                 </div>
                                             </div>
                                         </div>
-    
-                    <div class="pub-card" data-topic="concept-learning" data-year="2023" data-selected="false">
-                        <div class="row">
-                            <div class="col-l col-xs-12 col-lg-3">
-                                <img src="projects/icra23/thumb.png" width="70%" style="width:70%" />
-                            </div>
-                            
-                            <div class="col-r col-xs-12 col-lg-9">
-                                <div class="pub-card-body">
-                                    <h5 class="title">Neuro-symbolic programs for language-guided robot manipulation
-                                    </h5>
-                                    <h6 class="authors">
-                                        Namasivayam K*,
-                                        <u>Himanshu Gaurav Singh</u>*,
-                                        Vishal Bindal*,
-                                        Arnav Tuli,
-                                        Rahul Jain,
-                                        Vishwajeet Aggrawal,
-                                        <a href="https://www.cse.iitd.ac.in/~parags/index.html">Parag Singla</a>,
-                                        <a href="https://www.cse.iitd.ac.in/~rohanpaul/index.html">Rohan Paul</a>
-                                    </h6>
-                                    <p class="info">
-                                        <a href="https://www.icra2023.org" class="conference">ICRA 2023</a> |
-                                        <a href="https://nips.cc/virtual/2022/57711" class="workshop">NeurIPS 2022
-                                            Workshop</a> |
-                                        <a href="https://arxiv.org/abs/2211.06652">Paper</a> |
-                                        <a href="https://github.com/dair-iitd/nsrmp">Code</a>
-    
-    
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-    
-                    <br>
-    
-                    <div class="pub-card" data-topic="llm" data-year="2023" data-selected="false">
-                        <div class="row">
-                            <div class="col-l col-xs-12 col-lg-3">
-                                <img src="projects/jeegpt/thumb.png" width="70%" style="width:70%" />
-                            </div>
-                            <div class="col-r col-xs-12 col-lg-9">
-                                <div class="pub-card-body">
-                                    <h5 class="title">Have LLMs Advanced Enough? A Challenging Problem Solving Benchmark For
-                                        Large Language Models
-                                    </h5>
-                                    <h6 class="authors">
-                                        Daman Arora*,
-                                        <u>Himanshu Gaurav Singh</u>*,
-                                        <a href="https://www.cse.iitd.ac.in/~mausam/index.html">Mausam</a>
-                                    </h6>
-                                    <p class="info">
-                                        <a href="https://2023.emnlp.org" class="conference">EMNLP 2023</a> |
-                                        <a href="https://arxiv.org/pdf/2305.15074.pdf">Paper</a> |
-                                        <a href="https://github.com/hgaurav2k/JEEBench">Code</a>
-    
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+
                 </div>
+
+                <p class="text" style="margin-top: 20px;">
+                    Visit my <a href="https://scholar.google.com/citations?user=qav_fQYAAAAJ&hl=en" target="_blank">Google Scholar</a> for other works.
+                </p>
             </div>
         </div>
 
@@ -331,5 +286,18 @@
     </div>  
 </div>
 
+<script>
+    // Show sticky nav when scrolling past the header
+    const stickyNav = document.getElementById('sticky-nav');
+    const mainSection = document.getElementById('main');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) {
+            stickyNav.classList.add('visible');
+        } else {
+            stickyNav.classList.remove('visible');
+        }
+    });
+</script>
 </body>
 </html>
