@@ -94,7 +94,7 @@ a:hover {
     padding: 60px 30px 30px;
     width: 100%;
     min-width: 240px;
-    text-align: center;
+    text-align: left;
     background-color: #fdf9f3;
     color: #2d2a26;
 }
@@ -112,7 +112,7 @@ a:hover {
 
 .main-content {
     padding: 0;
-    text-align: center;
+    text-align: left;
     cursor: default;
     background-color: #fdf9f3;
     color: #2d2a26;
@@ -150,71 +150,31 @@ margin: 0 auto;
 /* Avatar, Name, etc. */
 #main-content-container {
     margin: 0 auto;
-    padding: 0 0 0;
-    max-width: 1080px;
-
+    padding: 20px 0;
+    max-width: 900px;
 }
 
-@media (min-width: 768px) {
-    #main-content-container {
-        padding: 15px 0;
-    }
+#main-info-container {
+    text-align: left;
 }
 
-#main-content-container .col-avatar {
-    text-align: center
-}
-
-@media (min-width: 768px) {
-    #main-content-container .col-avatar {
-        text-align: center
-    }
-}
-
-#main-content-container .col-avatar .avatar {
-    z-index: 100;
-    width: 200px;
-    height: 200px;
-    margin-top: 35px;
+#main-info-container .avatar {
+    float: right;
+    width: 180px;
+    height: 180px;
+    margin: 0 0 20px 30px;
     border-radius: 50%;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12), 0 0 0 4px rgba(180, 90, 60, 0.1);
-    opacity: 1;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-#main-content-container .col-avatar .avatar:hover {
+#main-info-container .avatar:hover {
     transform: scale(1.03);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18), 0 0 0 4px rgba(180, 90, 60, 0.15);
 }
 
-#main-content-container .col-info {
-    height: 100%;
-    align-items: center;
-}
-
-#main-info-container {
-    padding-top: 15px;
-
-}
-
-#main-info-container .col-name {
-    text-align: center;
-    margin-top: 30px
-}
-
-@media (min-width: 768px) {
-    #main-info-container .col-name {
-        text-align: left;
-        margin-top: 0;
-    }
-}
-
-#main-info-container .col-name .text {
-    text-align: left
-}
-
-#main-info-container .col-name .name {
-    margin: 0;
+#main-info-container .name {
+    margin: 0 0 10px 0;
     color: #2d2a26;
     font-size: 2.2em;
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -222,55 +182,23 @@ margin: 0 auto;
     letter-spacing: -0.02em;
 }
 
-#main-info-container .col-name .email {
-    color: #666;
-    font-size: 14px
+#main-info-container .links {
+    margin-bottom: 20px;
+    font-size: 1rem;
 }
 
-#main-info-container .col-link {
-    text-align: center;
-    margin: -5px 0 -25px;
+#main-info-container .bio {
+    margin: 0 0 16px 0;
+    line-height: 1.7;
 }
 
-#main-info-container .col-link ul {
-    margin: 0px auto auto;
-    padding: 0;
-    list-style: none;
-    text-align: center
+/* Clear float after content */
+#main-info-container::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
-#main-info-container .col-link li {
-    display: inline-block;
-    margin: auto;
-    padding: 0 10px;
-    color: #ccc;
-    line-height: 10px
-}
-
-#main-info-container .col-link li a {
-    width: 45px;
-    height: 45px;
-    color: #ccc;
-    padding: 0;
-    font-size: 45px;
-    line-height: 45px
-}
-
-#main-info-container .col-link li a:focus,
-#main-info-container .col-link li a:hover {
-    text-decoration: none;
-    cursor: hand
-}
-
-#main-info-container .col-link li a.border {
-    border: 1px solid #ccc;
-    border-radius: 100%;
-}
-
-#main-info-container .col-link li a.padding {
-    padding: 0px 0px;
-    font-size: 22px
-}
 
 /* Other */
 .main-more-container {
@@ -296,11 +224,10 @@ margin: 0 auto;
 
 #main-pub-container {
     margin: auto;
-    padding: 0 0em;
-    max-width: 1080px;
+    padding: 0;
+    max-width: 900px;
     text-align: left;
     padding-top: 0;
-    max-width: 1080px;
     background-color: #fdf9f3;
 }
 
